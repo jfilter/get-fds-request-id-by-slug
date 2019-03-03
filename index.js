@@ -7,7 +7,7 @@ const ORIGIN = "https://fragdenstaat.de";
 
 const parseWebsite = website => {
   const $ = cheerio.load(website);
-  const shortUrl = $(".copyinput").val();
+  const shortUrl = $(".copy-text").val();
   if (shortUrl == null) return null;
   const lastIndex = shortUrl.lastIndexOf("/");
   return parseInt(shortUrl.substring(lastIndex + 1));
